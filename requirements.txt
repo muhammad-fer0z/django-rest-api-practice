@@ -18,6 +18,7 @@ itypes==1.2.0
 Jinja2==3.0.3
 MarkupSafe==2.0.1
 packaging==21.3
+psycopg==3.0.7
 psycopg-binary==3.0.7
 PyJWT==2.3.0
 pyparsing==3.0.6
