@@ -27,7 +27,7 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-@5lr!q!*p&e6&tj+b*2_kmoxho-ske9*mg^bg-ajpqff@-an0l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'project-rest-api-test.herokuapp.com/']
