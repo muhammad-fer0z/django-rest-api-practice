@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 from datetime import timedelta
 import environ
-import django_heroku
+import django_on_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -166,4 +166,4 @@ EMAIL_HOST_USER = env('EMAIL_USERNAME')
 EMAIL_HOST_PASSWORD = env('EMAIL_PASSWORD')
 
 CORS_ALLOW_ALL_ORIGINS = True
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
