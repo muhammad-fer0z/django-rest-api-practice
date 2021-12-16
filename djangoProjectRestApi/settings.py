@@ -150,7 +150,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
@@ -171,4 +172,4 @@ EMAIL_HOST_USER = env('EMAIL_USERNAME')
 EMAIL_HOST_PASSWORD = env('EMAIL_PASSWORD')
 
 CORS_ALLOW_ALL_ORIGINS = True
-django_on_heroku.settings(config=locals(), staticfiles=False, logging=False)
+django_on_heroku.settings(locals())
