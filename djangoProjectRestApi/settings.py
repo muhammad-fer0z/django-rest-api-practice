@@ -171,4 +171,4 @@ EMAIL_HOST_USER = env('EMAIL_USERNAME')
 EMAIL_HOST_PASSWORD = env('EMAIL_PASSWORD')
 
 CORS_ALLOW_ALL_ORIGINS = True
-django_on_heroku.settings(locals())
+django_on_heroku.settings(config=locals(), staticfiles=False, logging=False)
