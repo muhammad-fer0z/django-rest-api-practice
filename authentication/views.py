@@ -60,7 +60,6 @@ class VarifyEmail(views.APIView):
         token = request.GET.get('token')
         try:
             payload = jwt.decode(token, settings.SECRET_KEY, algorithms="HS256")
-            print(payload)
             user = User.objects.get(id=payload['user_id'])
             if not user.is_verified:
                 user.is_verified = True
@@ -92,6 +91,8 @@ class PasswordResetPasswordApiView(GenericAPIView):
 
 
 class PasswordTokenCheckApiView(GenericAPIView):
+    serializer_class = PasswordResetPasswordSerializer
+
     def get(self, request, uuid64, token):
         try:
             user_id = smart_str(urlsafe_base64_decode(uuid64))
